@@ -14,7 +14,7 @@ body,html {
 #container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
     grid-column-gap: 10px;
     background-color: white;
     grid-row-gap: 10px;
@@ -29,13 +29,16 @@ body,html {
 
 #container > .box1 {
     grid-area: nav;
+    height: 100%;
+    border-bottom: solid black 1px;
+    background-color: white;
 
     
 }
 
 nav{
     background-color:rgb(74, 136, 218);
-    height: 50px;
+    height: auto;
     line-height: 50px;
 }
 
